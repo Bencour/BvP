@@ -12,13 +12,15 @@ A version with attribute of duration (_duur, in minutes) and seperately an endin
 
 Notes(Forgot a difference in date. Could change start/end time to be 'since a specific date/time' or add a day to the tuple)
 '''
+#AgendaItem with methods: initialisation, update, str, print
+# Held attributes: _beschrijving (str), _starttijd (hours,minutes), (_eindtijd (hours, minutes) OR _duur (minutes))
 class AgendaItem:
     def __init__(self, beschr="Een les.", start_t=(9, 0), eind_t=(9, 50)):
         self._beschrijving = beschr
-        self.starttijd = start_t
+        self._starttijd = start_t
         if isinstance(eind_t, tuple):
-            assert start_t[0] <= eind_t[0]
-            if start_t[0] == eind_t[0]:
+            assert start_t[0] <= eind_t[0] # Hours of end time >= hours of start time
+            if start_t[0] == eind_t[0]: # If hours are the same, check minutes
                 assert start_t[1] < eind_t[1]
             self._eindtijd = eind_t
         else:
