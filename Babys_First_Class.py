@@ -1,3 +1,15 @@
+'''
+Make a class AgendaItem for which each instance exists of:
+1. A string (description) of the AgendaItem
+2. A starting time.
+3. A duration
+
+To this end create a:
+Constructor that sets the above attributes
+A method to updates/sets the attributes
+Asserts so that duration > 0
+A version with attribute of duration (_duur) and seperately an ending time (_eindtijd)
+'''
 class AgendaItem:
     def __init__(self, beschr="Een les.", start_t=(9, 0), eind_t=(9, 50)):
         self._beschrijving = beschr
