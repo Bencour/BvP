@@ -9,6 +9,8 @@ Constructor that sets the above attributes
 A method to updates/sets the attributes
 Asserts so that duration > 0
 A version with attribute of duration (_duur) and seperately an ending time (_eindtijd)
+
+Notes(Forgot a difference in date. Could change start/end time to be 'since a specific date/time' or add a day to the tuple)
 '''
 class AgendaItem:
     def __init__(self, beschr="Een les.", start_t=(9, 0), eind_t=(9, 50)):
